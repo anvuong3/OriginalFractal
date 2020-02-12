@@ -14,7 +14,6 @@ public void myFractal(int x, int y, int siz){
 	stroke((float)(Math.random() * 255), (float)(Math.random() * 255), (float)(Math.random() * 255));
 	fill(0);
 	rect(x,y,siz,siz);
-	circle(x,y,siz);
 	if(siz > 10){
 		myFractal(x,y,siz/2);
 		myFractal(x,y*2,siz/2);
@@ -23,7 +22,7 @@ public void myFractal(int x, int y, int siz){
 public void circleFractal(int x, int y, int siz){
 	stroke((float)(Math.random() * 255), (float)(Math.random() * 255), (float)(Math.random() * 255));
 	fill(0);
-	circle(x,y,siz);
+	ellipse(x,y,siz, siz);
 	if(siz > 10){
 		circleFractal(x/2,y,siz/2);
 		circleFractal(x*2,y,siz/2);
